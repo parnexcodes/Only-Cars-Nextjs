@@ -6,7 +6,7 @@ function Cards(props) {
     <div className="flex flex-wrap flex-grow pt-8 gap-4 justify-center pb-8">
     {data.memes.map((element) => {
       return (
-        <div className="bg-neutral-800 rounded-lg pb-2">
+        <div key={element.author} className="bg-neutral-800 rounded-lg pb-2">
           <a
             href={element.url}
             target="_blank"
@@ -16,7 +16,6 @@ function Cards(props) {
               className="object-cover h-64 w-96"
               src={element.url}
               alt=""
-              srcset=""
             />
           </a>
           <div className="flex justify-between">
