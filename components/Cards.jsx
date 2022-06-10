@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Breathing } from 'react-shimmer'
+import { Image, Shimmer } from 'react-shimmer'
 
 function Cards(props) {
     const { data } = props
@@ -16,9 +16,10 @@ function Cards(props) {
             <Image
               NativeImgProps={{className: "object-cover h-64 w-96"}}
               // className="object-cover h-64 w-96"
-              src={element.url}
+              src={element.preview[3]}
               alt=""
-              fallback={<Breathing width={384} height={256} />}
+              fallback={<Shimmer width={384} height={256} />}
+              fadeIn={true}
             />
           </a>
           <div className="flex justify-between">
